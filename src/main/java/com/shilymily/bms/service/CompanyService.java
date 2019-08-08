@@ -17,12 +17,9 @@ public class CompanyService {
     @Autowired
     private CompanyRepository companyRepository;
 
-    public void addOrUpdateCompany(Company company){
+    public Company addCompany(Company company){
         companyRepository.save(company);
-    }
-
-    public void removeCompany(String name){
-        companyRepository.deleteByName(name);
+        return company;
     }
 
     public List<Company> getAllCompanies(){
@@ -31,7 +28,15 @@ public class CompanyService {
         return companyList;
     }
 
-    public Company getCompanyByName(String name){
-        return companyRepository.findCompanyByName(name);
+    public Company getCompanyByName(int id){
+        return companyRepository.findCompanyByCompanyId(id);
+    }
+
+    public Company updateCompany(Company company){
+        return companyRepository.save(company);
+    }
+
+    public void removeCompany(int id){
+        companyRepository.deleteCompanyByCompanyId(id);
     }
 }

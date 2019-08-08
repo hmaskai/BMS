@@ -1,9 +1,6 @@
 package com.shilymily.bms.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,20 +10,28 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "companies")
-@Setter @AllArgsConstructor @NoArgsConstructor @ToString
-public class Company {
+@Data
+public class Company extends DateAudit{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    Integer company_id;
+    private int companyId;
+
+    @NotNull
+    private int userId;
+
     @Column(unique = true)
     @NotNull
-    String name;
+    private String name;
+
     @NotNull
-    String address;
+    private String address;
+
     @NotNull
-    String phoneNumber;
+    private String phoneNumber;
+
     @NotNull
-    String email;
+    private String email;
+
     @NotNull
-    String panCardNumber;
+    private String panCardNumber;
 }
