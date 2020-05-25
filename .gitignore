@@ -1,5 +1,5 @@
 HELP.md
-api-gateway-service/target/
+target
 .mvn/
 mvnw
 mvnw.cmd
@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### OS generated files ###
+.DS_Store
