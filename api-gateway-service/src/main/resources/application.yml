@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: api-gateway-service-registry-server-client
+server:
+  port: 443
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1443/eureka}
+  instance:
+    preferIpAddress: true

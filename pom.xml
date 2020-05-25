@@ -11,5 +11,6 @@
     <description>Brokerage Management System</description>
     <modules>
         <module>api-gateway-service</module>
+        <module>registry-server</module>
     </modules>
 </project>
