@@ -1,6 +1,5 @@
 package com.shilymily.apigatewayservice.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -22,7 +21,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "USERS")
-public class User {
+public class User extends DateAudit {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
