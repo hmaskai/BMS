@@ -1,0 +1,12 @@
+server.port: 3443
+spring:
+  application:
+    name: cloud-config-service
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+            - classpath:/service-config
+  profiles:
+    active: native
