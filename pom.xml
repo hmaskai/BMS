@@ -13,5 +13,6 @@
         <module>api-gateway-service</module>
         <module>registry-server</module>
         <module>data-service</module>
+        <module>cloud-config-service</module>
     </modules>
 </project>
