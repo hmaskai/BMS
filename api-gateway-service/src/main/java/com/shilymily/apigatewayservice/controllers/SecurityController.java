@@ -68,8 +68,7 @@ public class SecurityController {
     try {
       authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUserName(),
                                                                                  loginRequest.getPassword()));
-    }
-    catch (BadCredentialsException e) {
+    } catch (BadCredentialsException e) {
       return ResponseEntity.status(UNAUTHORIZED).body("Incorrect username or password");
     }
 

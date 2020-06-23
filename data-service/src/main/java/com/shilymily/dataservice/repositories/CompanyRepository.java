@@ -13,7 +13,10 @@ import org.springframework.stereotype.Repository;
 public interface CompanyRepository extends JpaRepository<Company, Integer> {
 
     Company findCompaniesByUserId(int id);
+
     Company findCompanyByCompanyId(int id);
+
     void deleteCompaniesByUserId(int id);
+    
     void deleteCompanyByCompanyId(int id);
 }
