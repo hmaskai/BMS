@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hmaskai/BMS.svg?branch=master)](https://travis-ci.org/hmaskai/BMS.svg?branch=master)
+
 # BMS
 Brokerage Management System
 
